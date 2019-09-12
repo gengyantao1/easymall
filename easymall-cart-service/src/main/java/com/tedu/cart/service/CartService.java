@@ -26,6 +26,8 @@ public class CartService {
 		 *	2.2 非空说明购物车数据已经存在,将旧num和新增num
 		 *		叠加,更新数据库的num数量
 		 *
+		 *
+		 *
 		 */
 		Cart exist=cartMapper.queryExist(cart);//userId productId
 		if(exist==null){
