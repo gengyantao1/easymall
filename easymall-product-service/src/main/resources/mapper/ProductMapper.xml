@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tedu.controller.mapper.ProductMapper">
+
+
+    <!-- total; -->
+    <select id="queryTotal" resultType="int">
+		select count(product_id) from t_product;
+	</select>
+    <!-- productList  -->
+    <select id="queryPage" resultType="Product">
+		select * from t_product limit #{start},#{rows};
+	</select>
+    <!-- 根据id查询单个商品,1 row -->
+    <select id="queryById" parameterType="String"
+            resultType="Product">
+		select * from t_product where
+		product_id=#{productId};
+	</select>
+    <insert id="saveProduct" parameterType="Product">
+		insert into t_product (
+		product_id,
+		product_price,
+		product_name,
+		product_category,
+		product_description,
+		product_num,
+		product_imgurl
+		) values (
+		#{productId},
+		#{productPrice},
+		#{productName},
+		#{productCategory},
+		#{productDescription},
+		#{productNum},
+		#{productImgurl}
+		)
+	</insert>
+    <update id="updateProduct" parameterType="Product">
+		update t_product set
+		product_name=            #{productName},
+		product_price=           #{productPrice},
+		product_num=             #{productNum},
+		product_description=     #{productDescription},
+		product_category=        #{productCategory},
+		product_imgurl=          #{productImgurl}
+		where product_id=        #{productId};
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

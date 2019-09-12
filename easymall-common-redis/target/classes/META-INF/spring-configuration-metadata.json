@@ -1,0 +1,32 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tedu.redis.config.JedisClusterConfig",
+      "name": "easymall.cluster",
+      "type": "com.tedu.redis.config.JedisClusterConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tedu.redis.config.JedisClusterConfig",
+      "name": "easymall.cluster.max-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tedu.redis.config.JedisClusterConfig",
+      "name": "easymall.cluster.max-total",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tedu.redis.config.JedisClusterConfig",
+      "name": "easymall.cluster.min-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.tedu.redis.config.JedisClusterConfig",
+      "name": "easymall.cluster.nodes",
+      "type": "java.util.List<java.lang.String>"
+    }
+  ]
+}
